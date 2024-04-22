@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="notas.css"> <!-- Agregamos el enlace al archivo CSS -->
 </head>
 <body>
+    <div class="header">
+        <h1>Notas del Estudiante</h1>
+        
+        <div>
+            <label>Código</label>
+            <label id="codigo"></label>
+        </div>
+        <div>
+            <label>Nombre</label>
+            <label id="nombre"></label>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>Promedio</td>
+                </tr>
+                <tr>
+                    <td id="promedioPonderado"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table id="notasTabla">
+        <thead>
+            <tr>
+                <th>Asignatura</th>
+                <th>Créditos</th>
+                <th>P1</th>
+                <th>P2</th>
+                <th>P3</th>
+                <th>EF</th>
+                <th>Definitiva</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las notas se llenarán aquí usando JavaScript -->
+        </tbody>
+    </table>
+    <p>Promedio Ponderado: <span id="weightedAverage"></span></p>
+    <button onclick="logout()">Cerrar Sesión</button>
 
-<h1>Mis Notas</h1>
-
-<table border="1">
-  <tr>
-    <th>Materia</th>
-    <th>Nota</th>
-  </tr>
-  <tr>
-    <td>Matemáticas</td>
-    <td>4.5</td>
-  </tr>
-  <tr>
-    <td>Ciencias</td>
-    <td>3.8</td>
-  </tr>
-  <!-- Agrega más filas según sea necesario -->
-</table>
-
+    <script src="notas.js"></script> <!-- Agregamos el enlace al archivo JavaScript -->
 </body>
 </html>
+
